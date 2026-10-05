@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NovaAuth</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="background">
+      <div class="circle circle1"></div>
+      <div class="circle circle2"></div>
+    </div>
+
+    <div class="container">
+      <div class="brand">
+        <div class="logo">N</div>
+        <h1>NovaAuth</h1>
+        <p>Welcome to your account</p>
+      </div>
+
+      <!-- LOGIN -->
+      <div id="loginSection">
+        <h2>Welcome Back</h2>
+        <p class="subtitle">Login to continue</p>
+
+        <form id="loginForm">
+          <div class="input-group">
+            <label>Email</label>
+            <input
+              type="email"
+              id="loginEmail"
+              placeholder="Enter your email"
+              required
+            />
+          </div>
+
+          <div class="input-group">
+            <label>Password</label>
+            <input
+              type="password"
+              id="loginPassword"
+              placeholder="Enter your password"
+              required
+            />
+          </div>
+
+          <button type="submit" class="main-btn">Login</button>
+        </form>
+
+        <p id="loginMessage" class="message"></p>
+
+        <div class="divider">
+          <span>New here?</span>
+        </div>
+
+        <button class="secondary-btn" onclick="showRegister()">
+          Create an Account
+        </button>
+      </div>
+
+      <!-- REGISTER -->
+      <div id="registerSection" class="hidden">
+        <h2>Create Account</h2>
+        <p class="subtitle">Join NovaAuth today</p>
+
+        <form id="registerForm">
+          <div class="input-group">
+            <label>Name</label>
+            <input
+              type="text"
+              id="registerName"
+              placeholder="Enter your name"
+              required
+            />
+          </div>
+
+          <div class="input-group">
+            <label>Email</label>
+            <input
+              type="email"
+              id="registerEmail"
+              placeholder="Enter your email"
+              required
+            />
+          </div>
+
+          <div class="input-group">
+            <label>Password</label>
+            <input
+              type="password"
+              id="registerPassword"
+              placeholder="Create a password"
+              minlength="6"
+              required
+            />
+          </div>
+
+          <button type="submit" class="main-btn">Create Account</button>
+        </form>
+
+        <p id="registerMessage" class="message"></p>
+
+        <div class="divider">
+          <span>Already registered?</span>
+        </div>
+
+        <button class="secondary-btn" onclick="showLogin()">
+          Back to Login
+        </button>
+      </div>
+
+      <!-- DASHBOARD -->
+      <div id="dashboardSection" class="hidden">
+        <div class="success-icon">✓</div>
+
+        <h2>You're Logged In!</h2>
+
+        <p class="subtitle">Welcome, <strong id="userName"></strong></p>
+
+        <div class="user-card">
+          <p>Email</p>
+          <strong id="userEmail"></strong>
+        </div>
+
+        <button class="main-btn" onclick="logout()">Logout</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

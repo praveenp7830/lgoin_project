@@ -1,0 +1,286 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background:
+    radial-gradient(circle at top left, #4f46e5, transparent 40%),
+    radial-gradient(circle at bottom right, #9333ea, transparent 40%), #09090f;
+
+  color: white;
+  overflow: hidden;
+}
+
+/* Background decoration */
+
+.background {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+}
+
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.4;
+}
+
+.circle1 {
+  width: 300px;
+  height: 300px;
+  background: #6366f1;
+  top: -100px;
+  left: -100px;
+}
+
+.circle2 {
+  width: 300px;
+  height: 300px;
+  background: #a855f7;
+  bottom: -100px;
+  right: -100px;
+}
+
+/* Main card */
+
+.container {
+  width: 420px;
+  max-width: 92%;
+
+  padding: 40px;
+
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+
+  border-radius: 24px;
+
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.5);
+
+  position: relative;
+  z-index: 2;
+}
+
+/* Brand */
+
+.brand {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.logo {
+  width: 55px;
+  height: 55px;
+
+  margin: 0 auto 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 16px;
+
+  background: linear-gradient(135deg, #6366f1, #a855f7);
+
+  font-size: 25px;
+  font-weight: bold;
+
+  box-shadow: 0 10px 30px rgba(99, 102, 241, 0.4);
+}
+
+.brand h1 {
+  font-size: 25px;
+}
+
+.brand p {
+  color: #aaa;
+  margin-top: 5px;
+}
+
+/* Headings */
+
+h2 {
+  font-size: 27px;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  color: #aaa;
+  margin-bottom: 25px;
+}
+
+/* Inputs */
+
+.input-group {
+  margin-bottom: 18px;
+}
+
+label {
+  display: block;
+  font-size: 14px;
+  color: #ccc;
+  margin-bottom: 8px;
+}
+
+input {
+  width: 100%;
+  padding: 14px 16px;
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+
+  outline: none;
+
+  background: rgba(255, 255, 255, 0.07);
+  color: white;
+
+  font-size: 15px;
+
+  transition: 0.3s;
+}
+
+input::placeholder {
+  color: #888;
+}
+
+input:focus {
+  border-color: #818cf8;
+
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
+}
+
+/* Buttons */
+
+button {
+  width: 100%;
+  padding: 14px;
+
+  border: none;
+  border-radius: 12px;
+
+  font-size: 15px;
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: 0.25s;
+}
+
+.main-btn {
+  color: white;
+
+  background: linear-gradient(135deg, #6366f1, #9333ea);
+
+  box-shadow: 0 10px 25px rgba(99, 102, 241, 0.3);
+}
+
+.main-btn:hover {
+  transform: translateY(-2px);
+
+  box-shadow: 0 15px 35px rgba(99, 102, 241, 0.45);
+}
+
+.secondary-btn {
+  background: rgba(255, 255, 255, 0.08);
+  color: white;
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.secondary-btn:hover {
+  background: rgba(255, 255, 255, 0.14);
+}
+
+/* Divider */
+
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  margin: 25px 0;
+
+  color: #888;
+  font-size: 13px;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+/* Messages */
+
+.message {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+/* Dashboard */
+
+.success-icon {
+  width: 65px;
+  height: 65px;
+
+  margin: 0 auto 20px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 50%;
+
+  background: #22c55e;
+
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.user-card {
+  padding: 18px;
+  margin: 25px 0;
+
+  border-radius: 14px;
+
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.user-card p {
+  color: #999;
+  font-size: 13px;
+  margin-bottom: 5px;
+}
+
+/* Hide */
+
+.hidden {
+  display: none;
+}
+
+/* Mobile */
+
+@media (max-width: 500px) {
+  .container {
+    padding: 28px 22px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+}
